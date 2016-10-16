@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Tina-b612.github.io</name>
-	<comment></comment>
+	<name>Sina Open Platform</name>
+	<comment>Create By HBuilder</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -16,7 +16,25 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1476598217230</id>
+			<id>0</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.orFilterMatcher</id>
+				<arguments>
+					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
+						<arguments>1.0-projectRelativePath-matches-false-false-bin</arguments>
+					</matcher>
+					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
+						<arguments>1.0-projectRelativePath-matches-false-false-setting</arguments>
+					</matcher>
+				</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1476601190806</id>
 			<name></name>
 			<type>26</type>
 			<matcher>

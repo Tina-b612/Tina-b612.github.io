@@ -1,0 +1,414 @@
+@charset "utf-8";
+/* reset.css*/
+body {
+	position: relative;
+	margin: 0;
+	font: 12px  Arial,Helvetica,sans-serif;
+	background-color: #e4e4e4;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+dl,
+dd,
+dt,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.clearFix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.ico {
+	position: absolute;
+	background-image: url(../img/ico2.png);
+	background-repeat: no-repeat;
+}
+
+
+/* end reset.css*/
+
+
+/* header*/
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	height: 50px;
+	background: url(../img/repeat-x.png) repeat-x ;
+	box-shadow: 0 0 3px #001623;
+}
+#header .header {
+	width: 980px;
+	margin: 0 auto;
+}
+#header .title {
+	float: left;
+}
+#header .logo {
+	display:inline-block;
+	margin-top: 5px;
+	width: 235px;
+	height: 40px;
+	background: url(../img/indexlogo.png) no-repeat ;
+}
+#header .logo:hover {
+	background-position: 0 -50px ;
+}
+#header .nav {
+	float: left;
+}
+#header .nav a {
+	position: relative;
+	float: left;
+	padding: 0 18px;
+	margin-right: 1px;
+	font: 16px/48px "微软雅黑";
+	color: #333;	
+	text-shadow: 0 1px 0 #fff;
+}
+#header .nav a:hover {
+	background: url(../img/repeat-x.png) repeat-x 0 -52px;
+	text-decoration: none;
+}
+.nav .ico {
+	position: absolute;
+	top: 24px;
+	right: 8px;
+	width: 7px;
+	height: 5px;
+}
+#header .support {
+	background: url(../img/repeat-x.png) repeat-x 0 -52px;
+}
+#header .subnav:hover:after {
+	position: absolute;
+	top: 48px;
+	right: 0;
+	content: "";
+	width: 85px;
+	height: 110px;
+	background: url(../img/ico.png) no-repeat -200px 0;
+	z-index: 9;
+}
+#header .subnav2:hover:after {
+	position: absolute;
+	top: 48px;
+	right: 0;
+	content: "";
+	width: 85px;
+	height: 158px;
+	background: url(../img/ico.png) no-repeat -200px 0;
+	z-index: 9;
+}
+#header .login {
+	float: right;
+	padding: 0 20px;
+	font-size: 16px;
+	line-height: 48px;
+	color: #333;	
+}
+#header .login:hover {
+	background: url(../img/repeat-x.png) repeat-x 0 -52px;
+	text-decoration: none;
+}
+#Main {
+	padding-top: 75px;
+	background: url(../img/website2.png) no-repeat center top;
+}
+.Main {
+	width: 950px;
+	margin: 0 auto;
+}
+#title {
+	position: relative;
+	display: block;
+	height: 60px;
+}
+#title .ico {
+	top: 0;
+	left: 13px;
+	width: 170px;
+	height: 44px;
+	background-position: -100px -50px;
+}
+
+#main {
+	width: 948px;
+	height: 916px;
+	background: #fff;
+	border-radius: 8px;
+	border: 1px solid rgba(0,0,0,.2);
+	box-shadow: 0 0 7px rgba(0,0,0,.1);
+}
+.con {
+	float: left;
+	margin-top: 30px;
+	padding: 7px 28px 0 28px;
+	width: 632px;
+}
+.con .title {
+	float: left;
+	width: 100%;
+	height: 35px;
+	border: 1px solid #f0f0f0;
+	border-radius: 3px;
+	font: 16px/33px "微软雅黑";
+	padding-left: 9px;
+	background: #f7f7f7;
+	color: #666;
+	box-sizing: border-box;
+}
+.title_con {
+	margin-right: -30px;
+}
+.platform_con {
+	position: relative;
+	float: left;
+	width: 275px;
+	text-indent: 13px;
+	font: 12px/42px arial;
+	color: #666;
+	text-align: center;
+	margin-right: 45px;
+}
+.platform_con img {
+	position: relative;
+	padding-top: 2px;
+	width: 275px;
+	height: 160px;
+	z-index: 3;
+}
+.platform_con img:hover {
+	z-index: 1;
+}
+.platform_con .ico {
+	top: 80px;
+	left: 88px;
+	width: 153px;
+	height: 55px;
+	background-position: -100px -350px;
+	z-index: 2;
+}
+.problem {
+	margin-top: 30px;
+}
+.problem_list {
+	float: left;
+	margin-top: 15px;
+}
+.problem_list a {
+	float: left;
+	width: 143px;
+	border: 1px solid #e2ebf1;
+	margin-left: 10px;
+	font: 16px/53px "微软雅黑";
+	text-align: center;
+	color: #3c7cb3;
+	background: -moz-linear-gradient(top,rgba(247,251,254,1) 0,rgba(239,249,254,1) 100%);
+	box-shadow: inset 0 0 1px 0 #FFF;
+} 
+.btm_list {
+	margin-top: 30px;
+	margin-right: -10px;
+}
+.btm_list li {
+	float: left;
+	width: 310px;
+	margin-right: 10px;
+	padding-bottom: 31px;;
+}
+.btm_list .text {
+	float: left;
+	font: 12px/20px arial;
+	color: #666;
+	padding: 19px 10px 10px 10px;
+}
+.btm_list li a {
+	font: 12px/20px arial;
+	color: #3c7cb3;
+	padding-left: 10px;
+}
+.site {
+	padding-left: 10px;
+	width: 300px;
+	font: 12px/20px arial;
+	color:　#333;
+}
+.site3 {
+	padding-top: 54px ;
+}
+.site4 {
+	padding-top: 10px ;
+}
+.weibo {
+	position: relative;
+	padding-left: 28px;
+	font: 12px/30px arial;
+	color: #666;
+}
+.btm_list .weibo a {
+	padding: 0;
+}
+.btm_list li .ico {
+	top: 10px;
+	left: 10px;
+	width: 15px;
+	height: 15px;
+	background-position: -62px -86px;
+}
+.btm_list .email .ico {
+	background-position: -79px -86px;
+}
+
+
+
+
+
+
+.right {
+	float: left;
+	width: 260px;
+	background: #f7f7f7;
+	border-radius: 0 8px 8px 0;
+	padding-top: 27px;
+}
+.right .title {
+	font: 15px/32px "微软雅黑";
+	width: 220px;
+	border-bottom: 1px dotted #bababa;
+	margin-left:20px;
+	padding-bottom: 3px;
+	color: #333;
+}
+.weibo_head {
+	margin: 30px 0 0 35px;
+	position: relative;
+	width: 170px;
+	height: 71px;
+}
+.weibo_head .Favicon {
+	position: absolute;
+	top: 0 ;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: url(../img/ico2.png) no-repeat -100px -250px;
+}
+.weibo_head .name {
+	position: absolute;
+	top: -5px;
+	left: 60px;
+	width: 110px;
+	height: 14px;
+	font-size: 14px;
+	color: #0082cb;
+}
+.weibo_head .ico {
+	top: 5px ;
+	right: 8px;
+	width: 16px;
+	height: 14px;
+	background-position: -84px -100px;
+}
+.weibo_head .attention {
+	position: absolute;
+	top: 27px;
+	left: 60px;
+	width: 63px;
+	height: 24px;
+	background: url(../img/ico2.png) no-repeat -150px -100px;
+}
+.weibo_head .attention:hover {
+	background: url(../img/ico2.png) no-repeat -150px -150px;
+}
+.weibo_hot {
+	margin: 0 10px 0 21px;
+	height: 428px;
+	width: 227px;
+	border-top: 1px solid #d2d2d2;
+	background: #fff;
+	overflow: auto;
+	color: #666;
+	font: 12px/20px arial;
+}
+.weibo_hot li {
+	margin-left: 10px;
+	padding: 12px 5px 0 5px;
+	border-bottom: 1px dotted #bababa;
+	width: 190px;
+}
+
+.picbox {
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid #d2d2d2;
+	background: #fff;
+}
+.picbox img {
+	width: 120px;
+	height: 80px;
+}
+.weibo_hot  .links {
+	margin-top: 1px ;
+	padding-left: 4px;
+	width:190px;
+	font: 12px/40px arial;
+}
+.weibo_hot  .links a {
+	float: left;
+	color: #0082cb;
+}
+.weibo_hot  .links span {
+	float: left;
+	margin: 0 7px 0 8px;
+}
+
+
+
+
+/* footer*/
+#footer {
+	margin: 0 auto;
+	width: 980px;
+	line-height: 13.5px;
+}
+.footer {
+	height: 57px;
+	text-align: center;
+}
+.footer .links {
+	margin: 20px 0 10px ;
+}
+.footer .links a {
+	margin: 0 15px;
+	color: #3c7cb3;
+}
+.footer .links span {
+	color: #ccc;
+}
+.footer .copyRight {
+	color: #999;
+}
+.footer .copyRight span {
+	margin: 0 10px;
+}
