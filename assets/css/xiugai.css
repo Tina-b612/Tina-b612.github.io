@@ -1,0 +1,12 @@
+.Demo-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	background: rgba(0,0,0,.3);
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font: 16px/26px "微软雅黑";
+	text-align: center;
+}
