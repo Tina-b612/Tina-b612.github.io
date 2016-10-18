@@ -55,7 +55,7 @@ body {
 	color: #fff;
 }
 .nav a  {
-	padding: 0 8px;
+	padding: 4px 8px;
 	color: #fff;
 }
 .link {
@@ -65,6 +65,7 @@ body {
 }
 .contact {
 	color: #fff;
+	padding: 7px;
 }
 .image {
 	margin-top: 10px;
@@ -75,6 +76,8 @@ body {
 }
 a:hover {
 	color: #f89;
+	background: #fff;
+	border-radius: 10px;
 }
 
 
