@@ -1,0 +1,91 @@
+body {
+	background: #000;
+}
+
+@keyframes scale{
+	from{transform: scale(.3);}
+	to{transform: scale(1);}
+}
+
+.card {
+	padding: 10px 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -110px 0 0 -275px;
+	width: 510px;
+	height: 220px;
+	background: rgba(0,0,0,.3);
+	border-radius: 30px;
+	border: 1px solid #fff;
+	animation: scale .8s;
+}
+.left {
+	float: left;
+	width: 350px;
+	height: 100%;
+}
+.right {
+	position: relative;
+	float: right;
+	width: 150px;
+	height: 100%;
+}
+.title {
+	font: 30px/40px "微软雅黑";
+	text-align: center;
+	color: #fff;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #fff;
+}
+.content {
+	position: relative;
+	height: 130px;
+	border-bottom: 1px solid #fff;
+}
+.nav {
+	position: absolute;
+	top: 50%;
+	margin-top: -24px;
+	padding: 4px 20px 4px 8px;
+	float: left;
+	font: 18px/40px "微软雅黑";
+	background: rgba(0,0,0,.3);
+	border-radius: 10px;
+	color: #fff;
+}
+.nav a  {
+	padding: 0 8px;
+	color: #fff;
+}
+.link {
+	float: right;
+	margin: 10px;
+	color: #fff;
+}
+.contact {
+	color: #fff;
+}
+.image {
+	margin-top: 10px;
+	width: 150px;
+	height: 200px;
+	border-radius: 10px;
+	border: 3px solid #fff;
+}
+a:hover {
+	color: #f89;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
