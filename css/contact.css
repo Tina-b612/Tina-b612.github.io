@@ -1,3 +1,6 @@
+body {
+	background: #000;
+}
 #wrap {
 	position: absolute;
 	top: 0;
@@ -20,12 +23,19 @@
 	padding: 5px 10px;
 	color: #fff;
 }
+
+@keyframes scale{
+	from{transform: scale(.3);}
+	to{transform: scale(1);}
+}
+
 .content-box {
 	margin-top: 50px;
 	background: rgba(204,204,204,.5);
 	border-radius: 20px;
 	padding: 20px;
 	overflow: hidden;
+	animation: scale .8s;
 }
 .contact-me {
 	font: 22px/40px "微软雅黑";
@@ -39,6 +49,7 @@
 	background: rgba(204,204,204,.5);
 }
 .contact-information li {
+	position: relative;
 	line-height: 50px;
 	padding-left: 50px;
 }
@@ -63,9 +74,22 @@ a:hover {
 	border: none;
 	vertical-align: top;
 }
+.ico {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding:0 10px 0 30px ;
+}
 
-
-
+.contact-information li:nth-child(1) .ico {
+	background: url(../img/youxiangico.png) no-repeat 0 14px;
+}
+.contact-information li:nth-child(2) .ico {
+	background: url(../img/weixinico.png) no-repeat 0 14px;
+}
+.contact-information li:nth-child(3) .ico {
+	background: url(../img/QQ.png) no-repeat 0 14px;
+}
 
 
 
