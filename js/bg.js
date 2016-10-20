@@ -2,8 +2,12 @@
 	jQuery.noConflict();
 	$a("body").width($a(window).width());
 	$a("body").height($a(window).height());
+	$a(window).resize(function() {
+		$a("body").width($a(window).width());
+		$a("body").height($a(window).height());
+	})
 	function fn(){
-		this.element = $a("#con1Canvas");							//获取元素
+		this.element = $a("#bg-Canvas");							//获取元素
 		this.width = $a(window).width();						//获取元素的width
 		this.height = $a(window).height();						//获取元素的height
 		this.targetQuyu = {x: this.width/2, y: this.height/2};	//设置渲染区域
@@ -62,7 +66,7 @@
 					}
 				}
 				this.points[i].newArr = arr1;
-				console.log( this.points );
+				//console.log( this.points );
 				//console.log(this.arr[i].newArr);
 		    };
 		 	window.addEventListener('mousemove', $a.proxy(this.mouseMove,this));

@@ -1,0 +1,73 @@
+body {
+	background: #000;
+	color: #fff;
+}
+#background {
+	position: relative;
+}
+#wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+@keyframes scale{
+	from{transform: scale(.3);}
+	to{transform: scale(1);}
+}
+#main {
+	margin: 0 auto;
+	width: 980px;
+	background: rgba(0,0,0,.3);
+	animation: scale .8s;
+}
+#path-box {
+	margin-top: 10px;
+	padding: 20px;
+	font: 30px/30px "微软雅黑";
+	border-bottom: 1px solid #fff;
+}
+#path-box .path-notes {
+	padding: 0 15px;
+}
+#content {
+	padding: 30px;
+	border-bottom: 1px solid #fff;
+}
+#footer {
+	padding: 20px;
+}
+#footer .link {
+	float: right;
+	margin: 0 10px;
+	padding-bottom: 20px;
+}
+#footer .contact {
+	padding: 7px;
+}
+a:hover {
+	color: #f89;
+	background: #fff;
+	border-radius: 10px;
+}
+.clearFix:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

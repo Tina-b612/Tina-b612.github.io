@@ -1,10 +1,102 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<title></title>
+		<link  rel="stylesheet"href="css/bg.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/notes.css"/>
 	</head>
 	<body>
-		Notes
+		<div id="background">
+			<canvas id="bg-Canvas"></canvas>
+		</div>
+		<section id="wrap">
+			<section id="main">
+				<header id="path-box">
+					<a class="path-notes" href="./">Tina's Blog »</a>
+				</header>
+				<section id="content" class="clearFix">
+					<div id="notes-box">
+						<h2 class="notes-list-title">Notes</h2>
+						<ul class="notes-list">
+							<li class="note-title">
+								<span class="date">2016年10月20日 »</span>
+								<span class="note-title-inner">正则表达式</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年10月17日 »</span>
+								<span class="note-title-inner">jQurey</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年10月10日 »</span>
+								<span class="note-title-inner">React</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年10月7日 »</span>
+								<span class="note-title-inner">模板引擎</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年10月5日 »</span>
+								<span class="note-title-inner">移动端开发</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年9月20日 »</span>
+								<span class="note-title-inner">弹性盒模型</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年9月11日 »</span>
+								<span class="note-title-inner">响应式开发</span>
+							</li>
+							<li class="note-title">
+								<span class="date">2016年9月8日 »</span>
+								<span class="note-title-inner">canvas绘画</span>
+							</li>
+						</ul>
+						<p class="notes-more"><a href="javascript:;">More</a></p>
+					</div>
+					<div id="sideBar">
+						<div class="latest-message">
+							<h2 class="title">Comments</h2>
+							<ul class="message-list">
+								<li class="message">
+									<span class="user-Name">翠花</span>：<span class="user-message">嘻嘻嘻</span>
+								</li>
+								<li class="message">
+									<span class="user-Name">李四</span>：<span class="user-message">哈哈哈</span>
+								</li>
+								<li class="message">
+									<span class="user-Name">王五</span>：<span class="user-message">呵呵呵呵呵</span>
+								</li>
+								<li class="message">
+									<span class="user-Name">大米</span>：<span class="user-message">喵喵咪喵喵</span>
+								</li>
+								<li class="message">
+									<span class="user-Name">小妹</span>：<span class="user-message">叮叮咚咚咚咚响</span>
+								</li>
+							</ul>
+						</div>
+						<div class="follow-me">
+							<h2 class="title">Follow me</h2>
+							<p class="follow-me-inner"><a href="https://github.com/Tina-b612">Github</a></p>
+						</div>
+						<div class="about">
+							<h2 class="title">About</h2>
+							<div class="about-inner">
+								
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer id="footer">
+					<p class="link"><a href="./contact.html" class="contact">Contact</a>| tina-b612.github.io</p>
+				</footer>
+			</section>
+		</section>
 	</body>
+	<script src="js/jquery-2.2.4.js"></script>
+	<script src="js/TweenLite.min.js"></script>
+	<script src="js/LSween.js"></script>
+	<script src="js/bg.js"></script>
 </html>

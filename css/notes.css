@@ -1,0 +1,88 @@
+#notes-box {
+	width: 60%;
+	padding: 15px 2% 10px;
+	margin-right: 3%;
+	float: left;
+	background: rgba(225,225,225,.4);
+	border-radius: 20px;
+}
+#sideBar>* {
+	width: 27%;
+	margin-top: 15px;
+	padding: 15px 2%;
+	float: left;
+	background: rgba(225,225,225,.4);
+	border-radius: 20px;
+}
+#sideBar>* .title {
+	font: 18px/26px "宋体";
+	padding-bottom: 5px;
+	border-bottom: 1px solid #fff;
+}
+.notes-list-title {
+	font: 20px/30px "宋体";
+	padding-bottom: 5px;
+	border-bottom: 1px solid #fff;
+}
+.notes-list {
+	margin-top: 15px;
+	padding-bottom: 15px ;
+	border-bottom: 1px solid #fff;
+}
+.note-title{
+	margin-left: 20px;
+	padding-left: 5px;
+	font: 16px/40px "宋体";
+	list-style-image: url(../img/笔记.png);
+}
+.note-title:hover {
+	color: #f89;
+	background: #fff;
+	cursor: pointer;
+}
+.notes-more {
+	float: right;
+	margin: 10px 15px 0 0 ;
+}
+.notes-more a {
+	display: inline-block;
+	font: 16px/26px "宋体";
+	padding: 0 10px;
+}
+.message-list {
+	margin-top: 15px;
+	padding: 10px;
+}
+.follow-me-inner {
+	margin-top: 15px;
+}
+.follow-me-inner a {
+	display: inline-block;
+	font: 14px/22px "宋体";
+	padding: 0 10px;
+}
+.about-inner　{
+	margin-top: 15px;
+}
+.user-message {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
