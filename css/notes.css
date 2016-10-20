@@ -39,6 +39,7 @@
 	color: #f89;
 	background: #fff;
 	cursor: pointer;
+	border-radius: 10px;
 }
 .notes-more {
 	float: right;
