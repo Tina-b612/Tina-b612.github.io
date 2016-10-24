@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		.iphone{
+			position: relative;
+			margin: -100px auto;
+			width: 356px;
+			height: 680px;
+			background: url(img/iphone.png) no-repeat;
+			border-radius: 20px;
+			transform: scale(.7)
+		}
+		.bg {
+			position: absolute;
+			top: 45px;
+			left: 16px;
+			padding: 20px 20px;
+			width: 284px;
+			height: 522px;
+			background: url(img/bg.png) no-repeat;
+		}
+		h2 {
+			margin: 0;
+		}
+		ul,li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.wrapList {
+			width: 282px;
+		}
+		.group {
+			margin-bottom: 10px;
+			border-radius: 7px;
+			background: rgba(0,0,0,.5);
+		}
+		.group-title {
+			position: relative;
+			padding-left: 40px;
+			font: 16px/46px "微软雅黑";
+			color: #fff;
+		}
+		.group-list {
+			border-radius: 0 0 7px 7px;
+			background: #000;
+			display: none;
+		}
+		.group-list li {
+			padding-left: 40px;
+			font: 14px/40px "微软雅黑";
+			color: #fff;
+		}
+		.ico{
+			position: absolute;
+			top: 19px;
+			left: 14px;
+			width: 7px;
+			height: 11px;
+			background: url(img/jiantou.png) no-repeat;
+		}
+		.button {
+			text-decoration: none;
+			text-align: center;
+			display: block;
+			width: 100px;
+			height: 40px;
+			font: 20px/40px "微软雅黑";
+			background: #FF8899;
+			color: #fff;
+			opacity: .8;
+		}
+		.button:hover {
+			opacity: 1;
+		}
+		.information {
+			position: absolute;
+			text-indent: 2em;
+			font: 16px/26px "微软雅黑";
+			top: 160px;
+			left: 20px;
+			width: 200px;
+			padding: 20px;
+			border: 3px solid #f89;
+			border-radius: 20px;
+		}
+	</style>
+	<body>
+		<a href="../../demos.html" class="button">back</a>
+		<div class="information">
+			<p>简介：</p>
+			<p>这个dome主要使用了面向对象编程思想，以及鼠标事件来实现。
+			主要效果有：鼠标移入 ，移出 ，点击列表后打开，收起，打开列表后的背景变色</p>
+		</div>
+		<div class="iphone">
+			<div class="bg">
+				<ul class="wrapList">
+					<li class="group">
+						<h2 class="group-title"><span class="ico"></span> 我的好友</h2>
+						<ul class="group-list">
+							<li>随风飞扬</li>
+							<li>就是这么拽</li>
+							<li>小熊维尼</li>
+							<li>安妮酱</li>
+						</ul>
+					</li>
+					<li class="group">
+						<h2 class="group-title"><span class="ico"></span>企业好友</h2>
+						<ul class="group-list">
+							<li>百度竞价-张经理</li>
+							<li>美团外卖-刘经理</li>
+							<li>天猫-王总监</li>
+							<li>联想-李组长</li>
+						</ul>
+					</li>
+					<li class="group">
+						<h2 class="group-title"><span class="ico"></span>黑名单</h2>
+						<ul class="group-list">
+							<li>ie6</li>
+							<li>ie7</li>
+							<li>ie8</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wrapList = document.getElementsByClassName("wrapList")[0];
+		var groupTitle = document.getElementsByClassName("group-title");
+		
+		function Group(ele){
+			this.ele = ele;
+			this.group = ele.getElementsByClassName("group");
+			this.groupTitle = ele.getElementsByClassName("group-title");
+			this.groupList = ele.getElementsByClassName("group-list");
+			this.len = this.groupTitle.length;
+			this.prev = 0;
+			this.init();
+		}
+		
+		Group.prototype.init = function (){
+			for(let i = 0 ; i < this.len; i++){
+				this.groupTitle[i].index = i;
+				this.groupTitle[i].stage = true;
+				var _this = this;
+				this.groupTitle[i].onclick = function(){
+					_this.open(this.index);
+				}
+				this.groupTitle[i].onmouseenter = function (){
+					_this.mouseenter(this.index);
+				}
+				this.groupTitle[i].onmouseleave = function (){
+					_this.mouseleave(this.index);
+				}
+			};
+		}
+		
+		Group.prototype.open = function (index){
+			if(this.groupTitle[index].stage){
+				this.groupList[this.prev].style.display = "none";
+				this.groupTitle[this.prev].stage = true;
+				this.group[this.prev].style.background = "rgba(0,0,0,.5)";
+				this.groupList[index].style.display = "block";
+				this.groupTitle[index].stage = false;
+				this.group[index].style.background = "rgba(255,136,153,1)";
+			}else{
+				this.groupList[index].style.display = "none";
+				this.groupTitle[index].stage = true;
+			}
+			this.prev = index;
+		}
+		
+		Group.prototype.mouseenter = function (index){
+			if(this.groupTitle[index].stage){
+				this.group[index].style.background = "rgba(255,136,153,.8)";
+			}
+		}
+		
+		Group.prototype.mouseleave = function (index){
+			if(this.groupTitle[index].stage){
+				this.group[index].style.background = "rgba(0,0,0,.5)";
+			}else{
+				this.group[index].style.background = "rgba(255,136,153,1)";
+			}
+		}
+		
+		var group = new Group(wrapList);
+		
+		
+	</script>
+</html>

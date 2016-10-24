@@ -1,0 +1,25 @@
+.demo {
+	float: left;
+	margin: 12px;
+}
+.demo-image {
+	width: 280px;
+	border-radius: 20px;
+}
+.dome-title {
+	margin-top: 8px;
+	text-align: center;
+}
+.dome-title a {
+	display: inline-block;
+	font: 16px/26px "宋体";
+	padding: 0 10px;
+}
+.demo-summary {
+	margin: 0 auto;
+	font: 12px/20px "幼圆";
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	text-indent: 2em;
+}

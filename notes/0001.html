@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Tina's Blog</title>
+		<link  rel="stylesheet"href="../css/bg.css">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/note.css"/>
+	</head>
+	<body>
+		<div id="background">
+			<canvas id="bg-Canvas"></canvas>
+		</div>
+		<section id="wrap">
+			<section id="main">
+				<header id="header">
+					<div id="path-box">
+						<a class="path-notes" href="../">Tina's Blog »</a>
+						<a class="path-notes" href="../notes.html">Notes »</a>
+						<span class="path-notes" >title »</span>
+					</div>
+					<nav class="sub-nav">
+						<a href="../notes.html">Notes</a>
+						/
+						<a href="../demos.html">Demos</a>
+						/
+						<a href="../about.html">About</a>
+					</nav>
+				</header>
+				<section id="content">
+					<h3 class="note-title">一些小知识点</h3>
+					<div class="note-inner">
+						<ul>
+							<li>1.使用对象进行判断时，对比的是对象在栈中的址，所有多次声明的一模一样的对象对比时，也是不相等的。只声明了一次的对象，赋给不同的变量时，变量相等</li>
+							<li>2.break（打断循环继续执行）一般是用在switch、for里，只能停止当前这个循环，一般用法是，判断满足某条件时，停止执行</li>
+							<li>3.continue（跳过当次for循环，继续执行下面的代码）用在for循环里，一般用法是，判断满足某条件时，跳过当次</li>
+							<li>4.当不使用var声明变量的时候，直接进行赋值，程序会自动创建这个变量，并且默认为全局变量</li>
+							<li>5.对象是无序集合</li>
+							<li>6.null == undefined   // true <br/>
+  								null === undefined   // false</li>
+  							<li>7.innerHTML 后跟 字符串。当后面跟对象时，会自动解析成字符串，类型+构造函数</li>
+						</ul>
+
+					</div>
+				</section>
+				<footer id="footer">
+					<p class="link"><a href="../contact.html" class="contact">Contact</a>| tina-b612.github.io</p>
+				</footer>
+			</section>
+		</section>
+	</body>
+	<script src="../js/jquery-2.2.4.js"></script>
+	<script src="../js/TweenLite.min.js"></script>
+	<script src="../js/LSween.js"></script>
+	<script src="../js/bg.js"></script>
+</html>

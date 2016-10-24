@@ -2,29 +2,43 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>Tina's Blog</title>
 		<link  rel="stylesheet"href="css/bg.css">
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/contact.css"/>
 	</head>
 	<body>
 		<div id="background">
 			<canvas id="bg-Canvas"></canvas>
 		</div>
-		<div id="wrap">
-			<header class="head">
-				<h2><a href="./">Tina's Blog »</a></h2>
-			</header>
-			<div class="content-box">
-				<h3 class="contact-me">联系我：</h3>
-				<ul class="contact-information">
-					<li><span class="ico">:</span>tina__1995@163.com</li>
-					<li><span class="ico">:</span><img src="img/weixin.jpg" class="image" /></li>
-					<li><span class="ico">:</span>903564267</li>
-				</ul>
-				<p class="link"><a href="#" class="contact">Contact</a>| tina-b612.github.io</p>
-			</div>
-		</div>
+		<section id="wrap">
+			<section id="main">
+				<header id="header">
+					<div id="path-box">
+						<a class="path-notes" href="./">Tina's Blog »</a>
+						<span class="path-notes" >Contact »</span>
+					</div>
+					<nav class="sub-nav">
+						<a href="./notes.html">Notes</a>
+						/
+						<a href="./demos.html">Demos</a>
+						/
+						<a href="./about.html">About</a>
+					</nav>
+				</header>
+				<section id="content">
+					<ul class="contact-information">
+						<li><span class="ico">:</span>tina__1995@163.com</li>
+						<li><span class="ico">:</span><img src="img/weixin.jpg" class="image" /></li>
+						<li><span class="ico">:</span>903564267</li>
+					</ul>
+				</section>
+				<footer id="footer">
+					<p class="link"><a href="./contact.html" class="contact">Contact</a>| tina-b612.github.io</p>
+				</footer>
+			</section>
+		</section>
 	</body>
 	<script src="js/jquery-2.2.4.js"></script>
 	<script src="js/TweenLite.min.js"></script>

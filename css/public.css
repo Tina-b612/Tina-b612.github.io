@@ -23,15 +23,21 @@ body {
 	background: rgba(0,0,0,.3);
 	animation: scale .8s;
 }
-#path-box {
+#header {
 	margin-top: 10px;
 	padding: 20px;
-	font: 30px/30px "微软雅黑";
 	border-bottom: 1px solid #fff;
 }
-#path-box .path-notes {
-	padding: 0 15px;
+#path-box {
 }
+#path-box .path-notes {
+	font: 18px/30px "微软雅黑";
+}
+#path-box .path-notes:nth-child(1) {
+	font: 30px/30px "微软雅黑";
+	padding-left:15px;
+}
+
 #content {
 	padding: 30px;
 	border-bottom: 1px solid #fff;
@@ -57,8 +63,12 @@ a:hover {
 	content: "";
 	clear: both;
 }
-
-
+.sub-nav {
+	float: right;
+}
+.sub-nav a {
+	padding: 0 10px;
+}
 
 
 

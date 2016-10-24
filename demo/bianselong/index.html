@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*
+		 css3动画：
+		 animation：
+		 
+		 animation-name ： 规定动画的名字
+		 	value： 自定义
+		 	
+		 animation-duration： 规定动画完成一个周期需要花费的时间
+		 	value： time  一般以"s"为单位，也可以是"min","h"
+		 	
+		 animation-timing-function： 规定动画的速度曲线。默认"ease"
+		 	value： 	{
+		 		linear：匀速			ease：慢-快-慢
+		 		ease-in: 匀加速		ease-out: 匀减速
+		 		ease-in-out： 慢-快-慢
+		 		cubic-bezier(n,n,n,n)： 贝塞尔曲线
+		 	}
+		 	
+		 animation-delay： 规定动画开始时的延迟时间
+		 	value： time  一般以"s"为单位，也可以是"min","h" 
+		 	
+		 animation-iteration-count ： 规定动画播放的次数，默认1
+		 	value：{
+		 		n: 自定义
+		 		infinite： 无限次
+		 	}
+		 	
+		 animation-direction： 规定动画在下一个周期是否反向播放，默认"normal"
+		 	value:{
+		 		normal: 正常播放
+		 		alternate： 反向播放
+		 	}
+		 
+		 animation-play-state ： 规定动画是否运行或暂停，默认"running"。
+		 	value：{
+		 		paused：暂停
+		 		running： 播放
+		 	}
+		 
+		 animation-fill-mode ： 规定动画结束以后的状态
+		 	value：{
+		 		none： 不改变默认行为
+		 		forwards: 停留在结束的位置
+		 		backwards: 回到开始时的位置
+		 		botn：？？
+		 	}
+		 */
+			
+			@keyframes icolor{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			@keyframes masks{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+		
+			body {
+			    margin: 0;
+			}
+			/* 视口  */
+			.wrap {
+				position: relative;
+				width: 600px;
+				height: 600px;
+				margin: 0 auto;
+				overflow: hidden;
+				transform: scale(.3);
+				transition: 1.5s;
+			}
+			/* 色盘  */
+			.color {
+				position: absolute;
+				top: -600px;
+				right: -800px;
+				width: 1500px;
+				height: 1500px;
+				background: url(img/bg-palette.jpg) no-repeat;
+				transform: rotate(0deg) scale(.3);
+				transform-origin: center center;
+				animation: icolor 20s linear infinite forwards;
+				transition: 1.5s;
+			}
+			/* 遮罩  */
+			.mask {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -435px 0 0 -435px;
+				width: 670px;
+				height: 670px;
+				border: 100px solid #fff;
+				background: url(img/diandian.png) no-repeat;
+				transform: rotate(0deg) scale(.3);
+				transform-origin: center center;
+				animation: masks 60s linear infinite forwards;
+				transition: 1.5s;
+			}
+			/* 变色龙  */
+			.drogon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -190px 0 0 -188px;
+				width: 376px;
+				height: 376px;
+				background: url(img/icon-chameleon.png) no-repeat;
+				transform: rotate(0deg);
+				transform-origin: center center;
+				z-index: 9;
+			}
+			.button {
+				text-decoration: none;
+				text-align: center;
+				display: block;
+				width: 100px;
+				height: 40px;
+				font: 20px/40px "微软雅黑";
+				background: #FF8899;
+				color: #fff;
+				opacity: .8;
+			}
+			.button:hover {
+				opacity: 1;
+			}
+			.information {
+				position: absolute;
+				text-indent: 2em;
+				font: 16px/26px "微软雅黑";
+				top: 160px;
+				left: 20px;
+				width: 200px;
+				padding: 20px;
+				border: 3px solid #f89;
+				border-radius: 20px;
+			}
+	</style>
+	<body>
+		<a href="../../demos.html" class="button">back</a>
+		<div class="information">
+			<p>简介：</p>
+			<p>这个dome主要使用Css3的animation 动画属性来实现</p>
+		</div>
+		<div class="wrap">
+			<div class="color"></div>
+			<div class="mask"></div>
+			<div class="drogon"></div>
+		</div>
+		<script type="text/javascript">
+			var wrap = document.querySelector(".wrap");
+			var color = document.querySelector(".color");
+			var mask = document.querySelector(".mask");
+			
+			setTimeout(function (){
+				wrap.style.webkitTransform = "scale(.6)";
+				color.style.webkitTransform = "scale(.6)";
+				mask.style.webkitTransform = "scale(.6)";
+			},30)
+			
+		</script>
+	</body>
+</html>
