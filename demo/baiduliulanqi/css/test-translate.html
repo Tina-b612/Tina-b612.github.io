@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #box {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid #000;
+    } 
+    @keyframes move {
+        0% {
+            transform: translateY(200px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+    #box div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        transform: translateX(0) translateY(200px) translateZ(0) rotateX(0) rotateY(0) rotateZ(0) rotate(0) scale(1);
+        animation: move 1s ease-out 2s;
+    }
+    
+  </style>
+  <script>
+
+  </script>
+</head>
+<body>
+  <div id="box">
+    <div id="box1"></div>
+  </div>
+</body>
+</html>
+  
