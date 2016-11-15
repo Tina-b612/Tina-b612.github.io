@@ -1,0 +1,20 @@
+#content {
+	position: relative;
+}
+#content p {
+	height: 40px;
+	padding-left: 50px;
+	width: 400px;
+}
+#content p span {
+	display: inline-block;
+	width: 80px;
+}
+#content .image{
+	position: absolute;
+	right: 80px;
+	top: 10px;
+	width: 230px;
+	border: 3px solid #fff;
+	border-radius: 10px;
+}

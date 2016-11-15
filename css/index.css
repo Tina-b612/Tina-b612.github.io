@@ -4,7 +4,7 @@ body {
 
 @keyframes scale{
 	from{transform: scale(.3);}
-	to{transform: scale(1);}
+	to{transform: scale(1.5);}
 }
 
 .card {
@@ -18,7 +18,7 @@ body {
 	background: rgba(0,0,0,.3);
 	border-radius: 30px;
 	border: 1px solid #fff;
-	animation: scale .8s;
+	animation: scale 1s forwards;
 }
 .left {
 	float: left;
