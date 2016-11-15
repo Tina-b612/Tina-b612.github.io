@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script>
+	var scale = 1;
+	if(window.devicePixelRatio){
+		scale = scale/window.devicePixelRatio;
+	}
+	document.write('<meta name="viewport" content="initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+',user-scalable=no">');
+</script>
+<script>
+	toSize ();
+	function toSize (){
+		var html = document.getElementsByTagName("html")[0];
+		var screenW = html.getBoundingClientRect().width;
+		html.style.fontSize = screenW/16 + "px";
+	}
+	window.addEventListener(
+		"orientationchage",function(){
+			toSize ();
+		},
+		false
+		);
+	window.addEventListener(
+		"resize",
+		function(){
+			toSize ();
+		},
+		false
+		);
+</script>
+	</head>
+	<body>
+		<a href="#search_box" class="top">
+			<p>︿</p>
+			<p>顶部</p>
+		</a>
+		<header id="header">
+			<header class="header clearFix">
+				<a href="#" class="ico logo">
+				<a href="#" class="ico search_btn"></a>
+				<a href="#" class="ico records"></a>
+				<a href="#" class="ico login"></a>
+				<a href="#" class="ico download"></a>
+			</header>
+			<div class="nav_box clearFix">
+			<div class="menu">
+			<nav class="nav  clearFix">
+				<a href="#" class="current">精选</a>
+				<a href="#">跑男</a>
+				<a href="#">VIP会员</a>
+				<a href="#">电视剧</a>
+				<a href="#">电影</a>
+				<a href="#">综艺</a>
+				<a href="#">动漫</a>
+				<a href="#">资讯</a>
+				<a href="#">娱乐</a>
+				<a href="#">原创</a>
+				<a href="#">搞笑</a>
+				<a href="#">健康</a>
+				<a href="#">生活</a>
+				<a href="#">母婴</a>
+				<a href="#">脱口秀</a>
+				<a href="#">军事</a>
+				<a href="#">片花</a>
+				<a href="#">旅游</a>
+				<a href="#">时尚</a>
+				<a href="#">财经</a>
+			</nav>
+			</div>
+			<span class="shadow"></span>
+			<a href="#" class="ico more"></a>
+			</div>
+		</header>
+		<section id="main" class="main">
+			<div id="search_box">
+				<form id="search_form" method="post" action="#">
+					<input type="text" 
+						   id="s" 
+						   class="swap_value" />
+					<input type="image" 
+						   src="img/search.png" 
+						   id="go"
+						   alt="Search"
+						   title="Search" />
+				</form>
+				<span class="ico"></span>
+			</div>
+			<section id="banner">
+				<a href="#" class="banner_box"></a>
+					<img src="img/IMG_1454.png" class="pic"/> 
+					<span class="ico"></span>
+					<div class="point_box">
+						<a href="#" class="current"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+					</div>
+					<h3 class="title">舌尖上的Mimosa:裸蛋糕风情</h3>
+			</section>
+			<section id="nav_box">
+				<div class="nav">
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+					<a href="#" class="btn"></a>
+				</div>
+			</section>
+			<ul id="con_list">
+				<li class="today">
+					<h2 class="today_title con_title"><span class="ico"></span>今日资讯</h2>
+					<div class="new clearFix">
+						<a href="#"><span class="ico"></span>美使馆汽车剐蹭后扬长而去 北京警方已介入</a>
+						<a href="#"><span class="ico"></span>南方今起再迎两轮强降雨 福建等地有大暴雨</a>
+					</div>
+					<div class="x_list clearFix">
+						<a href="#">
+							<img src="img/IMG_8183.png" />
+							<span class="day">昨日发布</span>
+							<span class="time">06:32</span>
+							<span class="name">云图</span>
+						</a>
+						<a href="#">
+							<img src="img/IMG_8183.png" />
+							<span class="day">昨日发布</span>
+							<span class="time">06:32</span>
+							<span class="name">云图</span>
+						</a>
+						<a href="#">
+							<img src="img/IMG_8183.png" />
+							<span class="day">昨日发布</span>
+							<span class="time">06:32</span>
+							<span class="name">云图</span>
+						</a>
+						<a href="#">
+							<img src="img/IMG_8183.png" />
+							<span class="day">昨日发布</span>
+							<span class="time">06:32</span>
+							<span class="name">云图</span>
+						</a>
+					</div>
+					<p class="more clearFix">
+						<a href="#">更多资讯<span class="ico"></span></a>
+						<span class="border"></span>
+						<a href="#">换一批<span class="ico"></span></a>
+					</p>
+				</li>
+				<li class="TVplay">
+					<h2 class="con_title"><span class="ico"></span>电视剧</h2>
+					<div class="y_list clearFix">
+						<a href="#">
+							<img src="img/TV3.png"  />
+							<span class="renovate">更新至22集</span>
+							<p class="name">Indy's Back</p>
+						</a>
+						<a href="#">
+							<img src="img/TV3.png"  />
+							<span class="renovate">更新至22集</span>
+							<p class="name">Indy's Back</p>
+						</a>
+						<a href="#">
+							<img src="img/TV3.png"  />
+							<span class="renovate">更新至22集</span>
+							<p class="name">Indy's Back</p>
+						</a>
+						<a href="#">
+							<img src="img/TV3.png"  />
+							<span class="renovate">更新至22集</span>
+							<p class="name">Indy's Back</p>
+						</a>
+						<a href="#">
+							<img src="img/TV3.png"  />
+							<span class="renovate">更新至22集</span>
+							<p class="name">Indy's Back</p>
+						</a>
+						<a href="#">
+							<img src="img/TV3.png"  />
+							<span class="renovate">更新至22集</span>
+							<p class="name">Indy's Back</p>
+						</a>
+					</div>
+					<p class="more clearFix">
+						<a href="#">更多电视剧<span class="ico"></span></a>
+						<span class="border"></span>
+						<a href="#">换一批<span class="ico"></span></a>
+					</p>
+				</li>
+				<li class="movie">
+					<h2 class="con_title"><span class="ico"></span>电影</h2>
+					<div class="y_list clearFix">
+						<a href="#">
+							<img src="img/TV.png"  />
+							<span class="ico vip">VIP</span>
+							<span class="grade">9.1</span>
+							<p class="name">尼古拉斯爵士</p>
+						</a>
+						<a href="#">
+							<img src="img/TV.png"  />
+							<span class="ico vip">VIP</span>
+							<span class="grade">9.1</span>
+							<p class="name">尼古拉斯爵士</p>
+						</a>
+						<a href="#">
+							<img src="img/TV.png"  />
+							<span class="ico vip">VIP</span>
+							<span class="grade">9.1</span>
+							<p class="name">尼古拉斯爵士</p>
+						</a>
+						<a href="#">
+							<img src="img/TV.png"  />
+							<span class="ico vip">VIP</span>
+							<span class="grade">9.1</span>
+							<p class="name">尼古拉斯爵士</p>
+						</a>
+						<a href="#">
+							<img src="img/TV.png"  />
+							<span class="ico vip">VIP</span>
+							<span class="grade">9.1</span>
+							<p class="name">尼古拉斯爵士</p>
+						</a>
+						<a href="#">
+							<img src="img/TV.png"  />
+							<span class="ico vip">VIP</span>
+							<span class="grade">9.1</span>
+							<p class="name">尼古拉斯爵士</p>
+						</a>
+					</div>
+					<p class="more clearFix">
+						<a href="#">更多电影<span class="ico"></span></a>
+						<span class="border"></span>
+						<a href="#">换一批<span class="ico"></span></a>
+					</p>
+				</li>
+				<li class="variety">
+					<h2 class="con_title"><span class="ico"></span>综艺</h2>
+					<div class="x_list clearFix">
+						<a href="#">
+							<img src="img/IMG_1111.png"  />
+							<span class="renovate"> 06-11期</span>
+							<p class="name">我们恋爱吧！</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_1111.png"  />
+							<span class="renovate"> 06-11期</span>
+							<p class="name">我们恋爱吧！</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_1111.png"  />
+							<span class="alone">独播</span>
+							<span class="renovate"> 06-11期</span>
+							<p class="name">我们恋爱吧！</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_1111.png"  />
+							<span class="renovate"> 06-11期</span>
+							<p class="name">我们恋爱吧！</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_1111.png"  />
+							<span class="renovate"> 06-11期</span>
+							<p class="name">我们恋爱吧！</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_1111.png"  />
+							<span class="renovate"> 06-11期</span>
+							<p class="name">我们恋爱吧！</p>
+						</a>
+					</div>
+					<p class="more clearFix">
+						<a href="#">更多综艺<span class="ico"></span></a>
+						<span class="border"></span>
+						<a href="#">换一批<span class="ico"></span></a>
+					</p>
+				</li>
+				<li class="cate">
+					<h2 class="con_title"><span class="ico"></span>美食</h2>
+					<div class="y_list clearFix">
+						<a href="#">
+							<img src="img/tv6.png"  />
+							<span class="renovate">更新至8集</span>
+							<p class="name">法式甜品之旅</p>
+						</a>
+						<a href="#">
+							<img src="img/tv6.png"  />
+							<span class="renovate">更新至8集</span>
+							<p class="name">法式甜品之旅</p>
+						</a>
+						<a href="#">
+							<img src="img/tv6.png"  />
+							<span class="renovate">更新至8集</span>
+							<p class="name">法式甜品之旅</p>
+						</a>
+						<a href="#">
+							<img src="img/tv6.png"  />
+							<span class="renovate">更新至8集</span>
+							<p class="name">法式甜品之旅</p>
+						</a>
+						<a href="#">
+							<img src="img/tv6.png"  />
+							<span class="alone">独播</span>
+							<span class="renovate">更新至8集</span>
+							<p class="name">法式甜品之旅</p>
+						</a>
+						<a href="#">
+							<img src="img/tv6.png"  />
+							<span class="renovate">更新至8集</span>
+							<p class="name">法式甜品之旅</p>
+						</a>
+					</div>
+					<p class="more clearFix">
+						<a href="#">更多美食<span class="ico"></span></a>
+						<span class="border"></span>
+						<a href="#">换一批<span class="ico"></span></a>
+					</p>
+				</li>
+				<li class="recreation">
+					<h2 class="con_title"><span class="ico"></span>娱乐</h2>
+					<div class="x_list clearFix">
+						<a href="#">
+							<img src="img/IMG_8129.png" />
+							<span class="alone">自制</span>
+							<span class="day">7小时前发布</span>
+							<span class="renovate">06-12期</span>
+							<p class="name">绣春刀</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_8129.png" />
+							<span class="day">7小时前发布</span>
+							<span class="renovate">06-12期</span>
+							<p class="name">绣春刀</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_8129.png" />
+							<span class="day">7小时前发布</span>
+							<span class="renovate">06-12期</span>
+							<p class="name">绣春刀</p>
+						</a>
+						<a href="#">
+							<img src="img/IMG_8129.png" />
+							<span class="day">7小时前发布</span>
+							<span class="renovate">06-12期</span>
+							<p class="name">绣春刀</p>
+						</a>
+					</div>
+					<p class="mores clearFix"><a href="#">更多娱乐<span class="ico"></span></a></p>
+				</li>
+				<li class="app">	
+					<h2 class="con_title"><span class="ico"></span>应用推荐</h2>
+						<div class="app_list clearFix">
+						<a href="#" ></a>
+						<a href="#" ></a>
+						<a href="#" ></a>
+						<a href="#" ></a>
+					</div>
+					<p class="mores clearFix"><a href="#">更多应用<span class="ico"></span></a></p>
+				</li>
+				<li class="mores clearFix yijian">
+					<a href="#"><span class="ico"></span>意见反馈</a>
+				</li>
+			</ul>
+			<footer id="footer">
+				<p>悦享品质</p>
+				<p>Always Fun Alaways Fine</p>
+			</footer>
+		</section>
+	</body>
+</html>

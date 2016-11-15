@@ -4,6 +4,7 @@
 }
 .demo-image {
 	width: 280px;
+	height: 181px;
 	border-radius: 20px;
 }
 .dome-title {
@@ -17,7 +18,7 @@
 }
 .demo-summary {
 	margin: 0 auto;
-	font: 12px/20px "幼圆";
+	font: 12px/20px "宋体";
 	width: 200px;
 	height: 40px;
 	border-radius: 10px;
