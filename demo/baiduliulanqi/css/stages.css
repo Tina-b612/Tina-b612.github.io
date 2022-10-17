@@ -53,7 +53,7 @@
 	z-index: 1;
 	text-align: center;
 	cursor: pointer;
-	background: url("../images/home/bg-scroll-arrow_95a71ba.png") no-repeat center bottom;
+	background: url("../images/bg-scroll-arrow_95a71ba.png") no-repeat center bottom;
 	opacity: 0;
 	margin-left: -64px;
 	left: 50%
@@ -89,7 +89,7 @@
 	margin: -8px 0 0 -22px;
 	position: absolute;
 	top: 50%;
-	background: url("../images/home/icon-weixin_a81e328.png") no-repeat 0 -16px
+	background: url("../images/icon-weixin_a81e328.png") no-repeat 0 -16px
 }
 
 .button-next-weixin .button-next-link {
@@ -185,7 +185,7 @@
 	height: 16px;
 	margin: -4px 0 0 -4px;
 	border-radius: 0;
-	background: url("../images/home/icon-weixin_a81e328.png") no-repeat;
+	background: url("../images/icon-weixin_a81e328.png") no-repeat;
 	-webkit-transition: none 0s linear 0s;
 	-moz-transition: none 0s linear 0s;
 	-ms-transition: none 0s linear 0s;
@@ -401,43 +401,43 @@
 .stage-1-icon-1 .stage-1-icon-top,
 .stage-1-icon-1 .stage-1-icon-bottom {
 	z-index: 7;
-	background-image: url(../images/home/bg-number-1_d055a87.png)
+	background-image: url(../images/bg-1.png)
 }
 
 .stage-1-icon-2 .stage-1-icon-top,
 .stage-1-icon-2 .stage-1-icon-bottom {
 	z-index: 6;
-	background-image: url(../images/home/bg-number-2_8474a71.png)
+	background-image: url(../images/bg-2.png)
 }
 
 .stage-1-icon-3 .stage-1-icon-top,
 .stage-1-icon-3 .stage-1-icon-bottom {
 	z-index: 5;
-	background-image: url(../images/home/bg-number-3_5180f47.png)
+	background-image: url(../images/bg-3.png)
 }
 
 .stage-1-icon-4 .stage-1-icon-top,
 .stage-1-icon-4 .stage-1-icon-bottom {
 	z-index: 4;
-	background-image: url(../images/home/bg-number-4_23d785e.png)
+	background-image: url(../images/bg-4.png)
 }
 
 .stage-1-icon-5 .stage-1-icon-top,
 .stage-1-icon-5 .stage-1-icon-bottom {
 	z-index: 3;
-	background-image: url(../images/home/bg-number-5_517e73d.png)
+	background-image: url(../images/bg-5.png)
 }
 
 .stage-1-icon-6 .stage-1-icon-top,
 .stage-1-icon-6 .stage-1-icon-bottom {
 	z-index: 2;
-	background-image: url(../images/home/bg-number-6_e104400.png)
+	background-image: url(../images/bg-6.png)
 }
 
 .stage-1-icon-7 .stage-1-icon-top,
 .stage-1-icon-7 .stage-1-icon-bottom {
 	z-index: 1;
-	background-image: url(../images/home/bg-number-7_5c57e30.png)
+	background-image: url(../images/bg-7.png)
 }
 
 .stage-1-title {
@@ -629,13 +629,13 @@
 	width: 237px;
 	height: 37px;
 	margin: 0 auto 50px;
-	background: url(../images/home/text-stage-1-sub-title_e8f46b4.png?_sprite) no-repeat
+	background: url(../images/text-stage-1-sub-title_e8f46b4.png?_sprite) no-repeat
 }
 
 .stage-1-sub-title-weixin {
 	width: 274px;
 	height: 38px;
-	background: url(../images/home/text-stage-1-sub-title-weixin_462087b.png?_sprite) no-repeat
+	background: url(../images/text-stage-1-sub-title-weixin_462087b.png?_sprite) no-repeat
 }
 
 #stage-1.stage-state-default {
@@ -1447,12 +1447,12 @@
 	width: 1500px;
 	height: 1500px;
 	position: absolute;
-	background: url(../images/home/bg-palette_424fbb2.jpg) no-repeat
+	background: url(../images/bg-palette_424fbb2.jpg) no-repeat
 }
 
 .stage-3-icon-chameleon {
 	z-index: 3;
-	background: url(../images/home/icon-chameleon_bf2c0f8.png) no-repeat center center
+	background: url(../images/icon-chameleon_bf2c0f8.png) no-repeat center center
 }
 
 .stage-3-icon-chameleon-turnplate {
@@ -1526,7 +1526,7 @@
 	height: 56px;
 	position: relative;
 	z-index: 2;
-	background: url(../images/home/text-stage-3-title-png8_21db499.png) no-repeat
+	background: url(../images/text-stage-3-title-png8_21db499.png) no-repeat
 }
 
 .stage-3-description {
@@ -1707,7 +1707,7 @@
 	position: absolute;
 	top: 9px;
 	right: 13px;
-	background: url(../images/home/bg-tip-link-png8_0fdc868.png) no-repeat
+	background: url(../images/bg-tip-link-png8_0fdc868.png) no-repeat
 }
 
 .stage-4-title {
