@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <title>360°全景图</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/three.js/0.145.0/three.js"></script>
+    <script>
+      var scene = new THREE.Scene()
+      var container, camera
+      // 初始化相机
+      function initCamera() {
+        // 透视相机   视角宽度/视角长宽比例/近裁剪面/远裁剪面
+        camera = new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1100
+        )
+        camera.position.set(0, 0, 100) //相机位置
+        camera.lookAt(new THREE.Vector3(0, 0, 0)) //相机观察方向
+      }
+      // 初始化渲染器
+      function initRenderer() {
+        renderer = new THREE.WebGLRenderer()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        container = document.getElementById('container')
+        container.appendChild(renderer.domElement)
+      }
+      // 实时渲染
+      function animateIn() {
+        requestAnimationFrame(animateIn)
+        // sphereGeometryMeth.rotation.y += 0.001;
+        callPosition()
+        renderer.render(scene, camera)
+      }
+
+      var loader = new THREE.TextureLoader()
+      // 加载一个资源
+      loader.load(
+        'http://yun.dui88.com/h5/lyt/pic-360-02.png', // 资源链接
+        // 资源加载完成后的回调函数
+        function (texture) {
+          console.log('加载完成')
+          var sphereGeometry = new THREE.SphereGeometry(50, 50, 50)
+          var material = new THREE.MeshBasicMaterial({
+            map: texture,
+          })
+          // material.side = THREE.BackSide;
+          var sphereGeometryMeth = new THREE.Mesh(sphereGeometry, material)
+          sphereGeometryMeth.geometry.scale(1, 1, -1)
+          scene.add(sphereGeometryMeth)
+          camera.position.set(0, 0, 0)
+        },
+        // 资源加载过程中的回调函数
+        function (xhr) {
+          console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+        },
+        // 资源下载出错时的回调函数
+        function (xhr) {
+          console.log('An error happened')
+        }
+      )
+      initCamera()
+      initRenderer()
+      animateIn()
+
+      var isUserInteracting = false, //监控鼠标拖动
+        onPointerDownPointerX, //鼠标开始拖动时x轴
+        onPointerDownPointerY, //鼠标开始时拖动的y轴
+        onPointerDownLon, //视野移动过程中x轴的偏移量
+        onPointerDownLat, //视野移动过程中y轴的偏移量
+        lon = 0, //视野当前x轴的偏移量
+        lat = 0 //视野当前y轴的偏移量
+
+      container.addEventListener('mousedown', (e) => {
+        event.preventDefault()
+        isUserInteracting = true
+        onPointerDownPointerX = event.clientX
+        onPointerDownPointerY = event.clientY
+        onPointerDownLon = lon
+        onPointerDownLat = lat
+      })
+
+      container.addEventListener('mousemove', (e) => {
+        console.log('move');
+        if (isUserInteracting) {
+          lon = (onPointerDownPointerX - event.clientX) * 0.1 + onPointerDownLon
+          lat = (event.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat
+        }
+      })
+
+      container.addEventListener('mouseup', (e) => {
+        isUserInteracting = false
+      })
+
+      var pRadius = 1000, //旋转的步长
+        minFocalLength = 10, //视野最小值
+        maxFocalLength = 20 //视野最大值
+
+      function callPosition() {
+        // 取 -85 -- 85之间的最大值 拖动的角度
+        lat = Math.max(-85, Math.min(85, lat))
+        // 获取y轴需要旋转的弧度
+        var phi = THREE.MathUtils.degToRad(90 - lat)
+        // 获取x轴需要旋转的弧度
+        var theta = THREE.MathUtils.degToRad(lon)
+
+        // 使用三角函数计算一下 相机观测的角度
+        var obj = {}
+        obj.x = pRadius * Math.sin(phi) * Math.cos(theta)
+        obj.y = pRadius * Math.cos(phi)
+        obj.z = pRadius * Math.sin(phi) * Math.sin(theta)
+        camera.lookAt(new THREE.Vector3(obj.x, obj.y, obj.z))
+      }
+
+      container.addEventListener('mousewheel', (event) => {
+        var ev = ev || window.event
+        var down = true
+        // 获取相机当前视角fov的值
+        var m = camera.getFocalLength()
+        // 判断是缩小
+        down = ev.wheelDelta ? ev.wheelDelta < 0 : ev.detail > 0
+        if (down) {
+          if (m > minFocalLength) {
+            m -= m * 0.05
+            camera.setFocalLength(m)
+          }
+          // 否则是放大
+        } else {
+          if (m < maxFocalLength) {
+            m += m * 0.05
+            camera.setFocalLength(m)
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
