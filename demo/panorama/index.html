@@ -16,6 +16,7 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/three.js/0.145.0/three.js"></script>
     <script>
       var scene = new THREE.Scene()
+      var sphereGeometryMeth
       var container, camera
       // 初始化相机
       function initCamera() {
@@ -39,7 +40,12 @@
       // 实时渲染
       function animateIn() {
         requestAnimationFrame(animateIn)
-        // sphereGeometryMeth.rotation.y += 0.001;
+        if(sphereGeometryMeth){
+          sphereGeometryMeth.rotation.y += 0.001;
+        }
+        
+
+        // box.rotation.x += 0.1;
         callPosition()
         renderer.render(scene, camera)
       }
@@ -56,7 +62,7 @@
             map: texture,
           })
           // material.side = THREE.BackSide;
-          var sphereGeometryMeth = new THREE.Mesh(sphereGeometry, material)
+          sphereGeometryMeth = new THREE.Mesh(sphereGeometry, material)
           sphereGeometryMeth.geometry.scale(1, 1, -1)
           scene.add(sphereGeometryMeth)
           camera.position.set(0, 0, 0)
